@@ -1,0 +1,106 @@
+/* defining styles for mybomma (grid) */
+body{
+  background:#111;	
+}
+
+/* header section */
+.header{
+  background:#252525;	
+  display:flex;
+  margin-bottom:2%;
+  padding:20px;
+  justify-content:space-between;  
+}
+.header img{
+  width:180px;
+  height:60px;
+padding-left:100px;  
+}
+.header div:nth-child(2){
+  border:2px solid #454545;
+  border-radius:18px;
+  height:24px;
+  padding-left:15px;
+  background:#ffff66;
+
+}
+.header input{
+  border:none;
+  outline:none;
+  background:#252525;  
+  color:#eee;
+  font-size:1.05em;
+  padding-left:5px; 
+  height:23px;  
+}
+/* slogon section */
+.article{
+  text-align:center;
+  margin-bottom:10%;  
+}
+.article div{
+  font-size:3em;
+  color:#fff;
+  font-family:'Bauhaus 93';
+}
+.article div:first-letter{
+  background:#ffff66;
+  color:#000;
+  padding:0 8px;
+}
+.article p{
+  color:#ddd;
+  font-family:cooper;
+  font-size:105%;
+}
+/* footer section */
+.footer{
+  background:#252525;	
+  display:flex;
+  justify-content:space-between;  
+  padding:20px;
+  color:#ddd;
+  margin-top:30px;
+}
+/* grid layout (movies) */
+.grid-box{
+  width:90%;	
+  display:grid;	/* 20R x 1C */
+    /* grid-template-columns:400px 200px; 
+				OR */
+	/*grid-template-columns:auto auto auto auto auto; */
+	grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+	
+	grid-template-rows:auto auto auto auto;
+	/*column-gap:10px;
+	row-gap:10px;	OR  */
+	grid-gap:30px 18px;
+  margin:auto;
+}
+/* moive */
+.grid-box img{
+  width:100%;
+  height:290px;
+  border-radius:10px;  
+}
+.grid-box a{
+  font-size:1.25em;
+  color:yellow;
+  text-decoration:none;
+}
+.grid-box a:hover{
+  color:#fff;	
+}
+.grid-box div:last-child{
+  color:#ddd;
+  background:#2e2e2e;
+  display:inline-block;
+  padding:2px;
+}
+/*
+.grid-box .grid-item:hover{
+  transform:scale(1.1);
+}	*/
+.grid-box:hover > :not(:hover){	
+  filter:blur(7px);  
+}
